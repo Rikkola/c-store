@@ -5,14 +5,15 @@ package com.redhat.demos.coolstore;
  */
 
 @org.kie.api.definition.type.Role(org.kie.api.definition.type.Role.Type.EVENT)
+@org.kie.api.definition.type.Label("Promo Event")
 public class PromoEvent implements java.io.Serializable
 {
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "Item ID")
+   @org.kie.api.definition.type.Label("Item ID")
    private java.lang.String itemId;
-   @org.kie.api.definition.type.Label(value = "Percentage Off")
+   @org.kie.api.definition.type.Label("Percentage Off")
    private java.lang.Double percentOff;
 
    public PromoEvent()
