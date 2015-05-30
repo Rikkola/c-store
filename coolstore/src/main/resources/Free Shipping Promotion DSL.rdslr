@@ -1,4 +1,5 @@
 import java.lang.Number;
+import com.redhat.demos.coolstore.ShoppingCart;
 
 rule "Free Shipping Promotion DSL"
 	dialect "mvel"
