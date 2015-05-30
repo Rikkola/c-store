@@ -2,6 +2,8 @@ import java.lang.Number;
 
 rule "Free Shipping Promotion DSL"
 	dialect "mvel"
+	no-loop true
+	ruleflow-group "promo-rules"
 	when
 		If customer spends $75
 	then
