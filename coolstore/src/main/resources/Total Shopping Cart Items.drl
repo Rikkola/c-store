@@ -1,0 +1,11 @@
+package com.redhat.demos.coolstore
+
+rule "Total Shopping Cart Items"
+   ruleflow-group "pricing-rules"
+   no-loop true
+   when
+      $sc : ShoppingCart()
+      $sci : ShoppingCartItem( shoppingCart == $sc )
+   then
+
+end 
