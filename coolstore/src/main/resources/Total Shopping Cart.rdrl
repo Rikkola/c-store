@@ -1,7 +1,15 @@
 import java.lang.Number;
+import com.redhat.demos.coolstore.ShoppingCart;
 
 rule "Total Shopping Cart"
 	dialect "mvel"
+	no-loop true
+	ruleflow-group "total-rules"
 	when
+		$sc : ShoppingCart( )
 	then
+		modify( $sc ) {
+				setCartTotal( 0.0 ), 
+				setCartItemPromoSavings( ($sc.cartItemPromoSavings == 0.0) ? 0.0 : $sc.cartItemPromoSavings * -1 )
+		}
 end
